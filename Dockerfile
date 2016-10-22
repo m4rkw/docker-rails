@@ -8,9 +8,9 @@ RUN useradd -m rails
 
 ADD assets /
 
-RUN chown -R rails:rails /home/rails
+RUN chown -R rails:rails /var/www/rails
 
-WORKDIR /home/rails
+WORKDIR /var/www/rails
 
 RUN sudo -u rails bundler install --path /home/rails/.gem
 
